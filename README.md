@@ -1,123 +1,36 @@
-# Agamsiingh.AI – Full-Stack Website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A premium AI startup website for **Agamsiingh.AI**, built with Next.js 16, Tailwind CSS 4, Framer Motion, Express.js, and MongoDB.
+## Getting Started
 
----
-
-## 🗂️ Project Structure
-
-```
-agamsiingh.ai/
-├── frontend/          # Next.js 16 frontend
-└── backend/           # Express.js + MongoDB API
-```
-
----
-
-## 🚀 Getting Started (Local Development)
-
-### 1. Frontend
+First, run the development server:
 
 ```bash
-cd frontend
-npm install
-cp .env.local.example .env.local
-# Edit .env.local with your backend URL
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Frontend runs at: **http://localhost:3000**
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### 2. Backend
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```bash
-cd backend
-npm install
-cp .env.example .env
-# Fill in your MONGODB_URI in .env
-node src/index.js
-# or: npm run dev  (uses nodemon)
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Backend runs at: **http://localhost:5000**
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 🌍 Deployment
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Frontend → Vercel
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-1. Push `frontend/` to a GitHub repo
-2. Import project at [vercel.com](https://vercel.com)
-3. Add environment variable: `NEXT_PUBLIC_BACKEND_URL=https://your-backend.onrender.com`
-4. Deploy ✅
+## Deploy on Vercel
 
-### Backend → Render
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-1. Push `backend/` to a GitHub repo
-2. Create a new **Web Service** on [render.com](https://render.com)
-3. Set **Build Command**: `npm install`
-4. Set **Start Command**: `node src/index.js`
-5. Add environment variables:
-   - `MONGODB_URI` – your MongoDB Atlas connection string
-   - `FRONTEND_URL` – your Vercel frontend URL
-   - `NODE_ENV=production`
-6. Deploy ✅
-
----
-
-## 🔑 Environment Variables
-
-### Frontend (`frontend/.env.local`)
-| Variable | Description |
-|---|---|
-| `NEXT_PUBLIC_BACKEND_URL` | URL of the backend API |
-
-### Backend (`backend/.env`)
-| Variable | Description |
-|---|---|
-| `MONGODB_URI` | MongoDB Atlas connection string |
-| `PORT` | Server port (default: 5000) |
-| `FRONTEND_URL` | Frontend URL for CORS |
-| `NODE_ENV` | `development` or `production` |
-
----
-
-## 📡 API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/api/health` | Health check |
-| POST | `/api/book-consultation` | Submit booking/contact form |
-| GET | `/api/book-consultation` | Fetch all submissions (admin) |
-
-### POST `/api/book-consultation` Payload
-
-```json
-{
-  "name": "Agam Singh",
-  "email": "agamcoder@gmail.com",
-  "phone": "+91 85348 55501",
-  "service": "AI Agent Development",
-  "message": "I need an AI chatbot for my business."
-}
-```
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Frontend | Next.js 16, React 19, Tailwind CSS 4 |
-| Animations | Framer Motion |
-| Backend | Node.js, Express.js |
-| Database | MongoDB (Mongoose) |
-| Fonts | Google Fonts – Inter, Poppins |
-| Deploy | Vercel (frontend), Render (backend) |
-
----
-
-**Founder:** Agam Singh  
-**Contact:** agamcoder@gmail.com | +91 85348 55501  
-**WhatsApp:** https://wa.me/918534855501
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
